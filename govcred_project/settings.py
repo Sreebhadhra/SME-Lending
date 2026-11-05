@@ -37,6 +37,12 @@ DEBUG = os.environ.get('DJANGO_DEBUG', 'True').lower() in ('true', '1', 'yes')
 
 ALLOWED_HOSTS = [h.strip() for h in os.environ.get('DJANGO_ALLOWED_HOSTS', '127.0.0.1,localhost,.onrender.com').split(',') if h.strip()]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.onrender.com',
+    'http://localhost:8000',
+    'http://127.0.0.1:8000',
+]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -109,7 +115,10 @@ WSGI_APPLICATION = 'govcred_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-DATABASES = {
+if os.environ.get('RENDER') or os.environ.get('USE_SQLITE', '').lower() in ('true', '1') or not os.environ.get('DB_PASSWORD'):
+    DATABASES = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': BASE_DIR / 'db.sqlite3'}}
+else:
+    DATABASES = {
  'default': {
    'ENGINE': os.environ.get('DB_ENGINE', 'django.db.backends.mysql'),
    'NAME': os.environ.get('DB_NAME', 'govcred_db'),

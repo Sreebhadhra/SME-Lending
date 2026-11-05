@@ -3,4 +3,7 @@ djangorestframework
 Pillow
 gunicorn
 whitenoise
-mysqlclient
+numpy
+pandas
+scikit-learn
+joblib
