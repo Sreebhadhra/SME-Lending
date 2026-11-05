@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}My Loans{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-6 py-12">
+
+<h1 class="text-4xl font-bold mb-8">📋 My Loan Applications</h1>
+
+<div class="space-y-4">
+{% for app in applications %}
+    <div class="card p-6">
+        <div class="font-bold">₹{{ app.loan_amount }}</div>
+        <div>Status: {{ app.loan_status }}</div>
+    </div>
+{% empty %}
+    <p>No loan applications yet.</p>
+{% endfor %}
+</div>
+
+</div>
+{% endblock %}

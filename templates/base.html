@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}XYZ G-Force Engine - Governance-Linked Green Lending by XYZ Capital{% endblock %}</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .gradient-green {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+
+        .gradient-gold {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 24px;
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .score-display {
+            font-size: 72px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .progress-bar {
+            background: #e5e7eb;
+            height: 12px;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            border-radius: 6px;
+            transition: width 0.6s ease;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-success {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge-warning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .badge-danger {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation Bar -->
+    <nav class="gradient-bg shadow-2xl sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-4">
+                    <a href="{% url 'home' %}" class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center text-2xl">
+                            🌱
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-black text-white">XYZ G-Force Engine</h1>
+                            <p class="text-xs text-white/80">by XYZ Capital</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-2">
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'home' %}" class="nav-link">Home</a>
+                        <a href="{% url 'about' %}" class="nav-link">About</a>
+                        <a href="{% url 'governance:dashboard' %}" class="nav-link">Dashboard</a>
+                        <a href="{% url 'loans:list' %}" class="nav-link">My Loans</a>
+                        <a href="{% url 'loans:apply' %}" class="nav-link">Apply</a>
+
+                        <div class="border-l border-white/20 pl-4 ml-4 flex items-center space-x-4">
+                            <div class="text-white text-right">
+                                <p class="text-sm font-semibold">
+                                    {{ user.company_name|default:user.username }}
+                                </p>
+                                <p class="text-xs opacity-80">
+                                    {{ user.get_role_display }}
+                                </p>
+                            </div>
+
+                            <a href="{% url 'logout' %}"
+                               class="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg text-white font-medium transition">
+                                Logout
+                            </a>
+                        </div>
+
+                    {% else %}
+                        <a href="{% url 'home' %}" class="nav-link">Home</a>
+                        <a href="{% url 'about' %}" class="nav-link">About XYZ Capital</a>
+                        <a href="#features" class="nav-link">Features</a>
+                        <a href="#how-it-works" class="nav-link">How It Works</a>
+                        <a href="{% url 'admin:login' %}" class="bg-white text-purple-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition">
+                            Get Started
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Messages/Alerts -->
+    {% if messages %}
+        <div class="container mx-auto px-6 mt-6">
+            {% for message in messages %}
+                <div class="card p-4 mb-4 animate-fade-in
+                    {% if message.tags == 'success' %}bg-green-50 border-l-4 border-green-500{% endif %}
+                    {% if message.tags == 'error' %}bg-red-50 border-l-4 border-red-500{% endif %}
+                    {% if message.tags == 'warning' %}bg-yellow-50 border-l-4 border-yellow-500{% endif %}
+                    {% if message.tags == 'info' %}bg-blue-50 border-l-4 border-blue-500{% endif %}">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 text-2xl mr-3">
+                            {% if message.tags == 'success' %}✅{% endif %}
+                            {% if message.tags == 'error' %}❌{% endif %}
+                            {% if message.tags == 'warning' %}⚠️{% endif %}
+                            {% if message.tags == 'info' %}ℹ️{% endif %}
+                        </div>
+                        <div class="flex-1">
+                            <p class="font-semibold text-gray-900">{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-32 py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="text-3xl">🌱</span>
+                        <div>
+                            <h3 class="text-xl font-bold">XYZ G-Force Engine</h3>
+                            <p class="text-xs text-gray-400">by XYZ Capital</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        The first governance-linked green lending platform solving the commitment deficit and end-use risk in sustainable finance.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold mb-4 text-lg">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="{% url 'home' %}" class="hover:text-white transition">Home</a></li>
+                        <li><a href="{% url 'about' %}" class="hover:text-white transition">About XYZ Capital</a></li>
+                        <li><a href="{% url 'admin:login' %}" class="hover:text-white transition">Get Started</a></li>
+                        <li><a href="{% url 'governance:dashboard' %}" class="hover:text-white transition">Dashboard</a></li>
+                    </ul>
+                </div>
+
+                <!-- For SMEs -->
+                <div>
+                    <h4 class="font-bold mb-4 text-lg">For SMEs</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>Governance Scoring</li>
+                        <li>Green Loan Application</li>
+                        <li>Green Card & UPI</li>
+                        <li>Prime Benefits</li>
+                        <li>FREE ISO Certification</li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-bold mb-4 text-lg">Contact</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>📧 info@xyzcapital.com</li>
+                        <li>📞 +91 (22) 1234-5678</li>
+                        <li>🏢 Mumbai, India</li>
+                    </ul>
+                    <div class="mt-4 bg-purple-900/50 rounded-lg p-3 text-xs">
+                        <strong>XYZ Capital</strong><br>
+                        ₹5,000 Cr Loan Book<br>
+                        ₹500 Cr Green Facility
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    &copy; 2026 XYZ Capital. All rights reserved.
+                </p>
+                <div class="flex items-center space-x-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Terms of Service</a>
+                    <a href="{% url 'about' %}" class="hover:text-white transition">About Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional: Add some JavaScript for interactivity -->
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Auto-dismiss messages after 5 seconds
+        setTimeout(() => {
+            const messages = document.querySelectorAll('.animate-fade-in');
+            messages.forEach(msg => {
+                if (msg.classList.contains('bg-green-50') || msg.classList.contains('bg-blue-50')) {
+                    msg.style.opacity = '0';
+                    msg.style.transition = 'opacity 0.5s ease';
+                    setTimeout(() => msg.remove(), 500);
+                }
+            });
+        }, 5000);
+    </script>
+</body>
+</html>

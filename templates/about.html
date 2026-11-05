@@ -1,0 +1,297 @@
+{% extends 'base.html' %}
+
+{% block title %}About XYZ G-Force Engine{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="gradient-bg text-white py-32">
+    <div class="container mx-auto px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full text-sm font-semibold mb-8 border border-white/30">
+                 India's Most Progressive NBFC
+            </div>
+            <h1 class="text-6xl md:text-7xl font-black mb-8 leading-tight">
+                XYZ Capital
+            </h1>
+            <p class="text-2xl text-white/90 mb-12 leading-relaxed">
+                A technologically progressive Non-Banking Financial Company redefining green lending through 
+                <strong class="text-green-300">data-driven governance</strong> and 
+                <strong class="text-green-300">guaranteed end-use</strong>.
+            </p>
+            
+            <!-- Key Stats -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <div class="text-5xl font-black text-green-300 mb-2">₹5,000 Cr</div>
+                    <div class="text-white/80">Loan Book</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <div class="text-5xl font-black text-green-300 mb-2">₹500 Cr</div>
+                    <div class="text-white/80">Sustainable Governance Facility</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                    <div class="text-5xl font-black text-green-300 mb-2">100%</div>
+                    <div class="text-white/80">Data-Driven Underwriting</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Story -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl font-black text-gray-900 mb-8 text-center">Our Story</h2>
+            <div class="prose prose-lg max-w-none">
+                <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                    XYZ Capital is a technologically progressive Non-Banking Financial Company (NBFC) in India 
+                    with a robust loan book of <strong class="text-purple-600">₹5,000 Crores</strong>. We distinguish 
+                    ourselves by moving beyond traditional collateral-based lending toward 
+                    <strong class="text-purple-600">data-driven underwriting</strong>.
+                </p>
+                
+                <p class="text-xl text-gray-700 leading-relaxed mb-6">
+                    Recognizing the critical gap in green lending—where capital exists but execution mechanisms don't—we 
+                    secured a <strong class="text-green-600">₹500 Crore "Sustainable Governance Facility"</strong> 
+                    specifically designed to fund SMEs with strong ESG credentials.
+                </p>
+                
+                <p class="text-xl text-gray-700 leading-relaxed">
+                    Yet we faced two systemic challenges: <strong>no formal mechanism to commit lower rates based on 
+                    real-time governance data</strong>, and <strong>no way to guarantee funds reach green purposes</strong>. 
+                    These weren't just operational gaps—they were execution barriers preventing green lending from scaling.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- The Innovation -->
+<section class="py-20 bg-gradient-to-br from-purple-50 to-blue-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-black text-gray-900 mb-4">The GovCred Innovation</h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                We didn't just identify the problems—we built the solution
+            </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <!-- Problem 1 → Solution 1 -->
+            <div class="card p-10">
+                <div class="bg-red-100 border-l-4 border-red-500 p-6 rounded-lg mb-6">
+                    <div class="text-3xl mb-2">❌</div>
+                    <h3 class="font-bold text-xl text-red-900 mb-2">The Problem</h3>
+                    <p class="text-red-800">
+                        Despite talking about "green lending," there was <strong>no formal, automated mechanism</strong> 
+                        where we could contractually commit to lower rates based on real-time ESG data.
+                    </p>
+                </div>
+                
+                <div class="bg-green-100 border-l-4 border-green-500 p-6 rounded-lg">
+                    <div class="text-3xl mb-2">✅</div>
+                    <h3 class="font-bold text-xl text-green-900 mb-2">Our Solution</h3>
+                    <p class="text-green-800 mb-4">
+                        <strong>XYZ G-Force Engine's Commitment Mechanism:</strong> BRSR-based governance scoring (0-900)
+                        automatically triggers contractual rate discounts up to 3%.
+                    </p>
+                    <div class="bg-white rounded-lg p-4">
+                        <div class="text-sm font-semibold text-gray-700 mb-2">Live Rate Matrix</div>
+                        <div class="space-y-1 text-xs text-gray-600">
+                            <div>Score 800+: 9.0% (3% discount)</div>
+                            <div>Score 700+: 9.5% (2.5% discount)</div>
+                            <div>Score 600+: 10.0% (2% discount)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Problem 2 → Solution 2 -->
+            <div class="card p-10">
+                <div class="bg-red-100 border-l-4 border-red-500 p-6 rounded-lg mb-6">
+                    <div class="text-3xl mb-2">❌</div>
+                    <h3 class="font-bold text-xl text-red-900 mb-2">The Problem</h3>
+                    <p class="text-red-800">
+                        We had <strong>no mechanism to guarantee</strong> that funds disbursed for green purposes 
+                        (e.g., solar panels) weren't diverted to unrelated expenses.
+                    </p>
+                </div>
+                
+                <div class="bg-green-100 border-l-4 border-green-500 p-6 rounded-lg">
+                    <div class="text-3xl mb-2">✅</div>
+                    <h3 class="font-bold text-xl text-green-900 mb-2">Our Solution</h3>
+                    <p class="text-green-800 mb-4">
+                        <strong>XYZ G-Force Engine's End-Use Control:</strong> Green Card & UPI linked to approved vendor registry.
+                        Non-approved transactions are <strong>blocked in real-time</strong>.
+                    </p>
+                    <div class="bg-white rounded-lg p-4">
+                        <div class="text-sm font-semibold text-gray-700 mb-2">How It Works</div>
+                        <div class="space-y-1 text-xs text-gray-600">
+                            <div>✓ Transaction → Check vendor</div>
+                            <div>✓ Approved → Instant approval</div>
+                            <div>✗ Not approved → BLOCKED</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Mission & Vision -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
+            <!-- Mission -->
+            <div>
+                <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center text-white text-4xl mb-6 shadow-xl">
+                    🎯
+                </div>
+                <h3 class="text-4xl font-black text-gray-900 mb-6">Our Mission</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    To make green lending <strong class="text-purple-600">actually work</strong> by solving the two 
+                    critical execution gaps: commitment deficit and end-use risk.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    We're not just financing green transitions—we're <strong>guaranteeing</strong> they happen through 
+                    technology-enforced compliance and governance-linked incentives.
+                </p>
+            </div>
+            
+            <!-- Vision -->
+            <div>
+                <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 rounded-2xl flex items-center justify-center text-white text-4xl mb-6 shadow-xl">
+                    🌍
+                </div>
+                <h3 class="text-4xl font-black text-gray-900 mb-6">Our Vision</h3>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    To become India's leading <strong class="text-green-600">governance-first NBFC</strong>, where 
+                    borrower quality is measured not by collateral but by <strong>verifiable ESG practices</strong>.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    We envision a future where every rupee lent for sustainability creates <strong>measurable, 
+                    verifiable impact</strong>—not through self-reporting, but through <strong>real-time enforcement</strong>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Technology -->
+<section class="py-20 gradient-bg text-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-black mb-4">Technology at Our Core</h2>
+            <p class="text-xl opacity-90">Data-driven, not collateral-driven</p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                <div class="text-5xl mb-4">🤖</div>
+                <h3 class="text-2xl font-bold mb-3">AI-Powered Underwriting</h3>
+                <p class="text-white/80">
+                    Machine learning models predict default risk and compliance violations based on 
+                    governance metrics, not just financial statements.
+                </p>
+            </div>
+            
+            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                <div class="text-5xl mb-4">⛓️</div>
+                <h3 class="text-2xl font-bold mb-3">Blockchain-Ready</h3>
+                <p class="text-white/80">
+                    Immutable audit trail for all governance evidence and transactions, 
+                    ensuring transparency and preventing data manipulation.
+                </p>
+            </div>
+            
+            <div class="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8">
+                <div class="text-5xl mb-4">📊</div>
+                <h3 class="text-2xl font-bold mb-3">Real-Time Analytics</h3>
+                <p class="text-white/80">
+                    Live dashboards track compliance, end-use, and covenant adherence, 
+                    with instant alerts for any deviations.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Commitment -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-black text-gray-900 mb-8">Our Commitment to SMEs</h2>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="card p-8">
+                    <div class="text-4xl mb-4">🌟</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">PRIME Member Benefits</h3>
+                    <p class="text-gray-700 mb-4">
+                        100% green SMEs investing in green activities get:
+                    </p>
+                    <ul class="text-left text-gray-600 space-y-2">
+                        <li> Instant Prime status</li>
+                        <li>⚡ 24-hour approval</li>
+                        <li> Maximum 3% discount</li>
+                        <li> <strong>FREE ISO Certification on loan payoff!</strong></li>
+                    </ul>
+                </div>
+                
+                <div class="card p-8">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Fraud-Proof by Design</h3>
+                    <p class="text-gray-700 mb-4">
+                        Our architecture makes fraud impossible:
+                    </p>
+                    <ul class="text-left text-gray-600 space-y-2">
+                        <li> Approved vendors only</li>
+                        <li> Real-time blocking</li>
+                        <li> 100% invoice tracking</li>
+                        <li> Automated compliance</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="bg-gradient-to-r from-purple-600 to-purple-800 text-white p-10 rounded-3xl shadow-2xl">
+                <h3 class="text-3xl font-black mb-4">Join the Green Lending Revolution</h3>
+                <p class="text-xl mb-8 opacity-95">
+                    Partner with XYZ Capital and experience lending that actually drives sustainable impact.
+                </p>
+                <a href="{% url 'admin:login' %}" class="inline-block bg-white text-purple-600 px-10 py-4 rounded-xl text-lg font-bold hover:scale-105 transition transform">
+                    Get Started Today →
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-black text-gray-900 mb-8">Get in Touch</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="text-3xl mb-3">📧</div>
+                    <div class="font-semibold text-gray-900 mb-2">Email</div>
+                    <div class="text-gray-600">info@xyzcapital.com</div>
+                </div>
+                
+                <div>
+                    <div class="text-3xl mb-3">📞</div>
+                    <div class="font-semibold text-gray-900 mb-2">Phone</div>
+                    <div class="text-gray-600">+91 (22) 1234-5678</div>
+                </div>
+                
+                <div>
+                    <div class="text-3xl mb-3">🏢</div>
+                    <div class="font-semibold text-gray-900 mb-2">Office</div>
+                    <div class="text-gray-600">Mumbai, India</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

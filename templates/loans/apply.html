@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+
+{% block title %}Apply for Green Capital - XYZ Capital{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto">
+        
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
+                Green Loan Application
+            </h1>
+            <p class="text-lg text-gray-600">
+                Submit your requirements to the <span class="text-green-600 font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-emerald-500">XYZ G-Force Engine</span> for verification.
+            </p>
+        </div>
+
+        <div class="mb-10">
+            <div class="flex items-center justify-between relative">
+                <div class="flex flex-col items-center relative z-10">
+                    <div class="w-10 h-10 bg-green-600 text-white rounded-full flex items-center justify-center font-bold shadow-lg">1</div>
+                    <span class="text-xs font-bold mt-2 text-green-700 uppercase">SME Submission</span>
+                </div>
+                <div class="absolute top-5 left-0 w-full h-1 bg-gray-200 -z-0"></div>
+                <div class="flex flex-col items-center relative z-10">
+                    <div class="w-10 h-10 bg-white border-4 border-gray-200 text-gray-400 rounded-full flex items-center justify-center font-bold">2</div>
+                    <span class="text-xs font-bold mt-2 text-gray-400 uppercase">XYZ Verification</span>
+                </div>
+                <div class="flex flex-col items-center relative z-10">
+                    <div class="w-10 h-10 bg-white border-4 border-gray-200 text-gray-400 rounded-full flex items-center justify-center font-bold">3</div>
+                    <span class="text-xs font-bold mt-2 text-gray-400 uppercase">Disbursement</span>
+                </div>
+            </div>
+        </div>
+
+        <form method="post" enctype="multipart/form-data" class="space-y-8 animate-fade-in">
+            {% csrf_token %}
+
+            <div class="bg-white shadow-2xl shadow-gray-200/50 rounded-[2.5rem] overflow-hidden border border-gray-100">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="bg-blue-50 p-3 rounded-2xl text-2xl">💰</div>
+                        <h2 class="text-2xl font-black text-gray-800">Loan Requirements</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-gray-700 ml-1">Requested Amount (INR)</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-4 text-gray-400 font-bold">₹</span>
+                                <input type="number" name="requested_amount" placeholder="5,00,000" 
+                                       class="w-full pl-10 pr-4 py-4 bg-gray-50 border-2 border-transparent focus:border-green-500 focus:bg-white rounded-2xl transition-all outline-none text-lg font-medium" required>
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-gray-700 ml-1">Tenure (Months)</label>
+                            <input type="number" name="tenure_months" placeholder="24"
+                                   class="w-full px-4 py-4 bg-gray-50 border-2 border-transparent focus:border-green-500 focus:bg-white rounded-2xl transition-all outline-none text-lg font-medium" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white shadow-2xl shadow-gray-200/50 rounded-[2.5rem] overflow-hidden border border-gray-100">
+                <div class="p-8 md:p-12">
+                    <div class="flex items-center space-x-4 mb-8">
+                        <div class="bg-green-50 p-3 rounded-2xl text-2xl">🌱</div>
+                        <h2 class="text-2xl font-black text-gray-800">Governance & ESG Evidence</h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-gray-700 ml-1">Loan Purpose (Green Project)</label>
+                            <textarea name="purpose" rows="3" placeholder="Explain how this loan contributes to sustainable growth..."
+                                      class="w-full px-4 py-4 bg-gray-50 border-2 border-transparent focus:border-green-500 focus:bg-white rounded-2xl transition-all outline-none text-gray-700"></textarea>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                            <div class="bg-gray-50 p-6 rounded-3xl border-2 border-dashed border-gray-200 group hover:border-green-400 transition-colors">
+                                <label class="block text-sm font-black text-gray-600 mb-3 uppercase tracking-wider">ISO Certifications</label>
+                                <input type="file" name="iso_file" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-bold file:bg-green-600 file:text-white hover:file:bg-green-700 cursor-pointer">
+                                <p class="text-[10px] text-gray-400 mt-3 italic">Verified by XYZ Capital Verification Suite</p>
+                            </div>
+                            
+                            <div class="bg-gray-50 p-6 rounded-3xl border-2 border-dashed border-gray-200 group hover:border-blue-400 transition-colors">
+                                <label class="block text-sm font-black text-gray-600 mb-3 uppercase tracking-wider">Site Media Evidence</label>
+                                <input type="file" name="media_files" multiple class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-bold file:bg-blue-600 file:text-white hover:file:bg-blue-700 cursor-pointer">
+                                <p class="text-[10px] text-gray-400 mt-3 italic">Upload site photos/videos for end-use checking</p>
+                            </div>
+                        </div>
+
+                        <div class="space-y-2 pt-4">
+                            <label class="block text-sm font-bold text-gray-700 ml-1">Expected Energy Savings (Optional)</label>
+                            <input type="number" step="0.01" name="expected_energy_savings" placeholder="Expected kWh reduced per year"
+                                   class="w-full px-4 py-4 bg-gray-50 border-2 border-transparent focus:border-green-500 focus:bg-white rounded-2xl transition-all outline-none font-medium">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-gray-900 rounded-[2rem] p-8 flex items-center space-x-6 text-white shadow-xl shadow-gray-400">
+                <div class="hidden sm:block text-5xl">🛡️</div>
+                <div>
+                    <h3 class="text-xl font-bold">Fraud-Proof Governance Protocol</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        By submitting, you agree to XYZ Capital's end-use verification. Our system uses governance-linked data to ensure transparent, ethical capital deployment.
+                    </p>
+                </div>
+            </div>
+
+            <button type="submit" 
+                    class="group relative w-full flex justify-center py-6 px-4 border border-transparent text-2xl font-black rounded-3xl text-white bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 shadow-2xl transition-all transform hover:scale-[1.01] active:scale-95">
+                Submit Application for Verification
+                <span class="ml-3 group-hover:translate-x-2 transition-transform">→</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<style>
+    @keyframes fade-in {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+        animation: fade-in 0.6s ease-out forwards;
+    }
+</style>
+{% endblock %}

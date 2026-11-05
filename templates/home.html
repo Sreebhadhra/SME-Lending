@@ -1,0 +1,446 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Floating Advertisement Banner -->
+<div class="fixed top-20 right-6 z-40 max-w-sm animate-fade-in" style="animation-delay: 1s;">
+    <div class="bg-gradient-to-br from-green-500 via-emerald-500 to-teal-600 text-white p-6 rounded-2xl shadow-2xl border-4 border-white transform hover:scale-105 transition-all duration-300">
+        <div class="flex items-start space-x-4">
+            <div class="text-5xl">🌟</div>
+            <div>
+                <h3 class="font-black text-lg mb-2">PRIME BENEFITS!</h3>
+                <p class="text-sm opacity-95 mb-3">
+                    100% Green SME investing in green activities?
+                    <strong>Get PRIME features instantly!</strong>
+                </p>
+                <ul class="text-xs space-y-1 mb-3">
+                    <li>✓ Fast-track approval</li>
+                    <li>✓ Maximum rate discount (3%)</li>
+                    <li>✓ Priority customer service</li>
+                </ul>
+                <div class="bg-white/20 backdrop-blur-sm rounded-lg p-2 text-center border border-white/30">
+                    <div class="text-xs font-semibold">PAY OFF YOUR LOAN?</div>
+                    <div class="text-lg font-black">FREE ISO Certification! 🎉</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hero Section with Green Card & UPI Showcase -->
+<section class="gradient-bg text-white py-24 relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10">
+        <div class="absolute top-0 left-0 w-96 h-96 bg-green-400 rounded-full filter blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-400 rounded-full filter blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-6 relative z-10">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Left: Content -->
+            <div class="animate-fade-in">
+                <div class="inline-block bg-green-400/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-green-300/30">
+                    🌱 Powered by XYZ Capital
+                </div>
+                <h1 class="text-6xl md:text-7xl font-black mb-6 leading-tight">
+                    Green Lending,<br>
+                    <span class="text-green-300">Governance-Linked</span>
+                </h1>
+                <p class="text-xl text-white/90 mb-8 leading-relaxed">
+                    The world's first platform where your <strong class="text-green-300">governance score</strong>
+                    automatically unlocks better interest rates. Every rupee tracked. Every transaction validated.
+                </p>
+
+                <!-- Prime Benefits Highlight -->
+                <div class="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 p-6 rounded-2xl mb-8 shadow-2xl">
+                    <div class="flex items-center space-x-3 mb-3">
+                        <span class="text-4xl">👑</span>
+                        <h3 class="text-2xl font-black">PRIME Member Benefits</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm font-semibold">
+                        <li>✨ 100% Green SME? Get Prime instantly!</li>
+                        <li>⚡ Fast-track approval in 24 hours</li>
+                        <li>💰 Maximum 3% interest discount</li>
+                        <li>🎓 <strong>Pay off loan = FREE ISO Certification!</strong></li>
+                    </ul>
+                </div>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="{% url 'admin:login' %}" class="bg-white text-purple-600 px-8 py-4 rounded-xl text-lg font-bold hover:scale-105 transition transform shadow-2xl">
+                        Get Started →
+                    </a>
+                    <a href="#features" class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-white/20 transition border border-white/20">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Green Card & UPI Showcase -->
+            <div class="space-y-8 animate-fade-in" style="animation-delay: 0.3s;">
+                <!-- Green Card -->
+                <div class="relative">
+                    <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 rounded-3xl transform rotate-3 blur-xl opacity-50"></div>
+                    <div class="relative bg-gradient-to-br from-green-500 via-emerald-600 to-teal-700 p-8 rounded-3xl shadow-2xl border-4 border-white/20 backdrop-blur-sm">
+                        <!-- Card Chip -->
+                        <div class="w-16 h-12 bg-yellow-300 rounded-lg mb-6 shadow-lg"></div>
+
+                        <!-- Card Number -->
+                        <div class="text-white text-2xl font-mono mb-6 tracking-widest">
+                            5234 •••• •••• 7890
+                        </div>
+
+                        <!-- Card Details -->
+                        <div class="flex justify-between items-end">
+                            <div>
+                                <div class="text-white/70 text-xs mb-1">CARDHOLDER</div>
+                                <div class="text-white font-bold text-lg">GREEN SME</div>
+                            </div>
+                            <div class="text-right">
+                                <div class="text-white/70 text-xs mb-1">VALID THRU</div>
+                                <div class="text-white font-bold">12/28</div>
+                            </div>
+                        </div>
+
+                        <!-- Card Logo -->
+                        <div class="absolute top-8 right-8">
+                            <div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg border border-white/30">
+                                <div class="text-white font-black text-sm">GovCred</div>
+                                <div class="text-white/80 text-xs">GREEN CARD</div>
+                            </div>
+                        </div>
+
+                        <!-- Mastercard Logo Circles -->
+                        <div class="absolute bottom-8 right-8 flex space-x-[-12px]">
+                            <div class="w-12 h-12 bg-red-500 rounded-full opacity-70"></div>
+                            <div class="w-12 h-12 bg-yellow-500 rounded-full opacity-70"></div>
+                        </div>
+                    </div>
+
+                    <!-- Card Features -->
+                    <div class="mt-4 bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                        <div class="grid grid-cols-2 gap-3 text-sm text-white">
+                            <div>✅ Approved vendors only</div>
+                            <div>✅ Real-time blocking</div>
+                            <div>✅ 100% end-use tracking</div>
+                            <div>✅ Invoice mandatory</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Green UPI -->
+                <div class="bg-white rounded-3xl p-8 shadow-2xl border-4 border-green-200">
+                    <div class="flex items-center justify-between mb-6">
+                        <div>
+                            <div class="text-gray-500 text-sm mb-1">Pay via</div>
+                            <div class="text-3xl font-black text-gray-900">Green UPI</div>
+                        </div>
+                        <div class="text-6xl">💚</div>
+                    </div>
+
+                    <!-- QR Code -->
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-6 mb-6 border-2 border-green-200">
+                        <div class="bg-white p-4 rounded-xl inline-block">
+                            <!-- Simulated QR Code -->
+                            <div class="grid grid-cols-8 gap-1">
+                                {% for i in "12345678" %}
+                                    {% for j in "12345678" %}
+                                        <div class="w-2 h-2 {% if forloop.counter|divisibleby:2 %}bg-black{% else %}bg-white{% endif %} rounded-sm"></div>
+                                    {% endfor %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- UPI ID -->
+                    <div class="bg-gray-100 rounded-xl p-4 mb-4">
+                        <div class="text-gray-500 text-xs mb-1">Your Green UPI ID</div>
+                        <div class="font-mono text-lg font-bold text-gray-900">greensme@govcred</div>
+                    </div>
+
+                    <!-- UPI Features -->
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <div class="bg-green-50 text-green-900 px-3 py-2 rounded-lg font-semibold">
+                            ✓ Green vendors only
+                        </div>
+                        <div class="bg-green-50 text-green-900 px-3 py-2 rounded-lg font-semibold">
+                            ✓ Invoice required
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Two Clear Sections: SME Section vs XYZ Capital Section -->
+<section class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-black text-gray-900 mb-4">How XYZ G-Force Engine Works</h2>
+            <p class="text-xl text-gray-600">Two parties, one seamless system</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <!-- LEFT: For SMEs (Form Filling) -->
+            <div class="card p-10 border-4 border-blue-200">
+                <div class="text-center mb-8">
+                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white text-4xl font-black mx-auto mb-4 shadow-xl">
+                        🏭
+                    </div>
+                    <h3 class="text-3xl font-black text-gray-900 mb-2">For SMEs</h3>
+                    <p class="text-gray-600">You fill the forms & upload documents</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Step 1 -->
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-black flex-shrink-0">1</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-2">Fill Governance Profile</h4>
+                                <p class="text-sm text-gray-700 mb-3">Complete your BRSR-based governance data:</p>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• Board structure details</li>
+                                    <li>• Employee & gender diversity</li>
+                                    <li>• Labor relations data</li>
+                                    <li>• Ethics & compliance info</li>
+                                    <li>• Supplier ESG screening</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-black flex-shrink-0">2</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-2">Upload Evidence</h4>
+                                <p class="text-sm text-gray-700 mb-3">Submit supporting documents:</p>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>📄 ISO Certificates (14001, 50001)</li>
+                                    <li>📄 ESG Policy Documents</li>
+                                    <li>📄 Board Resolutions</li>
+                                    <li>📄 Audit Reports</li>
+                                    <li>📸 Photo Evidence</li>
+                                    <li>⚡ Electricity Bills (pre/post)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white font-black flex-shrink-0">3</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-2">Apply for Loan</h4>
+                                <p class="text-sm text-gray-700">Your governance score auto-calculates your interest rate!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: For XYZ Capital (Verification & Monitoring) -->
+            <div class="card p-10 border-4 border-purple-200">
+                <div class="text-center mb-8">
+                    <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-white text-4xl font-black mx-auto mb-4 shadow-xl">
+                        🏦
+                    </div>
+                    <h3 class="text-3xl font-black text-gray-900 mb-2">XYZ Capital</h3>
+                    <p class="text-gray-600">We verify & monitor end-use</p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Verification -->
+                    <div class="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-black flex-shrink-0">✓</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-2">Evidence Verification</h4>
+                                <p class="text-sm text-gray-700 mb-3">Our governance analysts verify:</p>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>✓ ISO Certificate authenticity</li>
+                                    <li>✓ ESG policy compliance</li>
+                                    <li>✓ Document completeness</li>
+                                    <li>✓ Data accuracy</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- End-Use Monitoring -->
+                    <div class="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-black flex-shrink-0">🔒</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-2">Real-Time End-Use Control</h4>
+                                <p class="text-sm text-gray-700 mb-3">We ensure funds go to green purposes:</p>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>🔍 Monitor every transaction</li>
+                                    <li>🚫 Block non-approved vendors</li>
+                                    <li>📋 Validate invoices</li>
+                                    <li>✅ Track green spend ratio</li>
+                                    <li>⚠️ Alert on anomalies</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Covenant Monitoring -->
+                    <div class="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-purple-600 rounded-full flex items-center justify-center text-white font-black flex-shrink-0">📊</div>
+                            <div>
+                                <h4 class="font-bold text-lg text-gray-900 mb-2">Covenant Compliance</h4>
+                                <p class="text-sm text-gray-700">Continuous monitoring ensures:</p>
+                                <ul class="text-sm text-gray-600 space-y-1">
+                                    <li>• 90%+ green-compliant spending</li>
+                                    <li>• 100% invoice compliance</li>
+                                    <li>• Governance score maintenance</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- System is Fraud-Proof Banner -->
+        <div class="mt-16 max-w-4xl mx-auto">
+            <div class="bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 text-white p-8 rounded-3xl shadow-2xl border-4 border-white text-center">
+                <div class="text-6xl mb-4">🛡️</div>
+                <h3 class="text-3xl font-black mb-3">Built Fraud-Proof</h3>
+                <p class="text-xl mb-6 opacity-95">
+                    GovCred's architecture makes fraud <strong>impossible</strong>, not just detectable.
+                </p>
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30">
+                        <div class="font-bold mb-1">Approved Vendors Only</div>
+                        <div class="text-sm opacity-90">Non-approved = Instant block</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30">
+                        <div class="font-bold mb-1">100% Invoice Tracking</div>
+                        <div class="text-sm opacity-90">Every rupee documented</div>
+                    </div>
+                    <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 border border-white/30">
+                        <div class="font-bold mb-1">Real-Time Validation</div>
+                        <div class="text-sm opacity-90">Instant compliance checks</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-black text-gray-900 mb-4">Why XYZ G-Force Engine?</h2>
+            <p class="text-xl text-gray-600">Two breakthrough innovations</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <!-- Innovation 1 -->
+            <div class="card p-10 hover:shadow-2xl transition-all duration-300 border-4 border-purple-100">
+                <div class="text-6xl mb-6">🎯</div>
+                <h3 class="text-3xl font-black text-gray-900 mb-4">Commitment Mechanism</h3>
+                <p class="text-gray-600 text-lg mb-6">
+                    <strong class="text-purple-600">Automatic, contractual</strong> rate adjustment.
+                    Not discretionary — encoded in the system.
+                </p>
+                <div class="bg-purple-50 border-l-4 border-purple-500 p-6 rounded-lg">
+                    <h4 class="font-bold text-purple-900 mb-3">Rate Tiers</h4>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex justify-between">
+                            <span>Score 800-900:</span>
+                            <span class="font-bold text-purple-600">9.0% (Save 3.0%)</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Score 700-799:</span>
+                            <span class="font-bold text-purple-600">9.5% (Save 2.5%)</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Score 600-699:</span>
+                            <span class="font-bold text-purple-600">10.0% (Save 2.0%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Innovation 2 -->
+            <div class="card p-10 hover:shadow-2xl transition-all duration-300 border-4 border-green-100">
+                <div class="text-6xl mb-6">🔒</div>
+                <h3 class="text-3xl font-black text-gray-900 mb-4">End-Use Guarantee</h3>
+                <p class="text-gray-600 text-lg mb-6">
+                    <strong class="text-green-600">Real-time blocking</strong> ensures every rupee
+                    goes to approved green vendors only.
+                </p>
+                <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg">
+                    <h4 class="font-bold text-green-900 mb-3">How It Works</h4>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-start">
+                            <span class="text-green-600 font-bold mr-2">1.</span>
+                            <span>SME attempts transaction</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-green-600 font-bold mr-2">2.</span>
+                            <span>System checks vendor registry</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-green-600 font-bold mr-2">3.</span>
+                            <span>✓ Approved → Instant approval</span>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-green-600 font-bold mr-2">4.</span>
+                            <span>✗ Not approved → <strong>BLOCKED</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="gradient-bg text-white py-20">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-5xl font-black mb-6">Ready to Transform Your Business?</h2>
+        <p class="text-2xl mb-10 opacity-90 max-w-3xl mx-auto">
+            Join GovCred and unlock governance-linked rates with guaranteed green end-use.
+        </p>
+
+        <!-- Prime Member CTA -->
+        <div class="bg-gradient-to-r from-yellow-400 to-orange-400 text-gray-900 p-8 rounded-3xl mb-10 max-w-3xl mx-auto shadow-2xl">
+            <div class="text-5xl mb-3">👑</div>
+            <h3 class="text-3xl font-black mb-3">Become a PRIME Member</h3>
+            <p class="text-lg mb-4">
+                <strong>100% Green SME</strong> investing in green activities?
+            </p>
+            <ul class="text-left max-w-lg mx-auto space-y-2 mb-6">
+                <li class="flex items-center">
+                    <span class="text-2xl mr-3">✨</span>
+                    <span>Instant Prime status</span>
+                </li>
+                <li class="flex items-center">
+                    <span class="text-2xl mr-3">⚡</span>
+                    <span>24-hour approval guarantee</span>
+                </li>
+                <li class="flex items-center">
+                    <span class="text-2xl mr-3">💰</span>
+                    <span>Maximum 3% interest discount</span>
+                </li>
+                <li class="flex items-center">
+                    <span class="text-2xl mr-3">🎓</span>
+                    <span><strong>FREE ISO Certification</strong> on loan payoff!</span>
+                </li>
+            </ul>
+        </div>
+
+        <a href="{% url 'admin:login' %}" class="inline-block bg-white text-purple-600 px-12 py-5 rounded-xl text-xl font-bold hover:scale-105 transition transform shadow-2xl">
+            Get Started Now →
+        </a>
+    </div>
+</section>
+{% endblock %}

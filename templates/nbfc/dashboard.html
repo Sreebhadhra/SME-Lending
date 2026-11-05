@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>NBFC Internal Dashboard</h2>
+
+<div class="stats-grid">
+
+    <div class="card">Total Loans: {{ total_loans }}</div>
+    <div class="card">Submitted: {{ submitted_loans }}</div>
+    <div class="card">Approved: {{ approved_loans }}</div>
+    <div class="card">Accepted: {{ accepted_loans }}</div>
+
+</div>
+
+<h3>Green Loan Lifecycle Tracker</h3>
+
+<table>
+    <tr>
+        <th>Application</th>
+        <th>Borrower</th>
+        <th>Amount</th>
+        <th>Status</th>
+    </tr>
+
+    {% for loan in loans %}
+    <tr>
+        <td>{{ loan.application_number }}</td>
+        <td>{{ loan.borrower.username }}</td>
+        <td>{{ loan.requested_amount }}</td>
+        <td>{{ loan.status }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h3>ESG ML Risk Heatmap (Concept Block)</h3>
+
+<div class="heatmap">
+    🔥 Default Risk vs Governance Score Visualization Placeholder
+</div>
+
+{% endblock %}
